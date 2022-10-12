@@ -161,8 +161,8 @@ public class settingsPage extends AppCompatActivity {
 
     private void createNotificationChanne1() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "countdown";
-            String description = "Channel For Alarm Manager ";
+            CharSequence name = "Schedule Reminder";
+            String description = "Your Schedule Events just arrives Now! Don't Miss Out ";
             int importance  = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel channel = new NotificationChannel("countdown" ,name ,importance);
             channel.setDescription(description);

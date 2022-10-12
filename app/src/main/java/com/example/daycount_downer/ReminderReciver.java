@@ -21,8 +21,8 @@ public class ReminderReciver extends BroadcastReceiver {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context,  "countdown")
                 .setSmallIcon(R.drawable.calander)
-                .setContentTitle("Toundraid Alarm Manager")
-                .setContentText("Subscribe for android related content")
+                .setContentTitle("Schedule Reminder")
+                .setContentText("Your Schedule Events just arrives Now! Don't Miss Out")
                 .setAutoCancel(true)
                 .setDefaults(NotificationCompat.DEFAULT_ALL)
                 .setPriority(NotificationCompat. PRIORITY_HIGH)
