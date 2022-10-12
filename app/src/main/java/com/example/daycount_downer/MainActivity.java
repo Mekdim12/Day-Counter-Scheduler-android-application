@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     class forHandlingbackgroundCountDowning implements Runnable{
 
         String FinalDate;
+        private volatile boolean running = true;
 
         public forHandlingbackgroundCountDowning(String FinalDate) {
             this.FinalDate = FinalDate;
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
 
 
-                while(true){
+                while(running){
                     try {
 
                         Object [] fetched = usingNewLibraryForSAndroidsGreaterThanEight(FinalDate);
@@ -93,6 +94,13 @@ public class MainActivity extends AppCompatActivity {
                         mothLeftHolder.setText(Long.toString(months) + " MONTHS");
                         long seconds = duration.toMinutes() * 60;
                         TimeHolder.setText(Long.toString(duration.toHours()) + ":" + Long.toString(duration.toMinutes())+ ":" +Long.toString((Long) fetched[1]));
+
+                        if(duration.toHours() < 0 || duration.toMinutes() < 0 || (Long) fetched[1] < 0) {
+                             TimeHolder.setText("0:0:0");
+                                tittleTheEvent.setText("set new Schedule Right here >");
+                                running = false;
+
+                        }
 
 
 
