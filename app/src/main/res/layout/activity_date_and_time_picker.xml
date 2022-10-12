@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dateAndTimePicker">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/tiitlebar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/teal_700"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck0" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+
+                android:src="@drawable/backbutton"
+
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+    <DatePicker
+
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="36dp"
+        android:paddingStart="30dp" />
+
+
+    <TimePicker
+        android:id="@+id/timepciker"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/datePicker"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:timePickerMode="spinner" />
+
+    <Button
+        android:id="@+id/setDateandTime"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="110dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/roundcornerbutton"
+        android:text="Set Date AND Time"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/white"
+
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</RelativeLayout>

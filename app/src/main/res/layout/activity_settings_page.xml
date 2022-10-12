@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settingsPage"
+    android:background="#F5F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/tiitlebar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/teal_700"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck0" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+
+                android:src="@drawable/backbutton"
+
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/Labeloftittl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Enter The Tittle Of Event"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            />
+
+        <EditText
+            android:id="@+id/tittleofthevent"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/Labeloftittl"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <EditText
+            android:id="@+id/DateInserting"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tittleofthevent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="7dp"
+            android:text="DD-MM-YY"
+            android:textColor="#8F8F8F" />
+
+        <ImageButton
+            android:id="@+id/CalanderChossing"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tittleofthevent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toRightOf="@id/DateInserting"
+            android:background="#F5F5F5"
+            android:src="@drawable/calander"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/DateInserting"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:checked="true"
+            android:switchMinWidth="56dp"
+            android:text="Do You Want To Enable Reminder?"
+            android:textColor="@color/teal_700"
+            android:textOff="OFF"
+            android:textOn="ON"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Button
+            android:id="@+id/settingSchedule"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/switch1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/roundcornerbutton"
+            android:backgroundTint="@color/teal_700"
+            android:text="Set"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
